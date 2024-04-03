@@ -1,0 +1,11 @@
+.sidenav {
+    width: 200px;
+    background: #3f51b5;
+}
+
+.nav-list p {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #fff;
+}
