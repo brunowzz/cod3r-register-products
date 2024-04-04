@@ -28,6 +28,8 @@ import { MatIconModule } from '@angular/material/icon';
 
 import { RedDirective } from './directives/red.directive';
 import { ProductReadComponent } from './components/template/product-read/product-read.component';
+import { ProductUpdateComponent } from './components/template/product-update/product-update.component';
+import { ProductDeleteComponent } from './components/template/product-delete/product-delete.component';
 
 registerLocaleData(localePt);
 
@@ -42,6 +44,8 @@ registerLocaleData(localePt);
     RedDirective,
     ProductCreateComponent,
     ProductReadComponent,
+    ProductUpdateComponent,
+    ProductDeleteComponent,
   ],
   imports: [
     BrowserModule,

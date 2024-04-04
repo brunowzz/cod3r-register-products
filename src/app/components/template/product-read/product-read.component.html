@@ -18,13 +18,13 @@
         <ng-container class="table-container" matColumnDef="action">
             <th class="item-table" mat-header-cell *matHeaderCellDef>Preço</th>
             <th class="item-table" mat-cell *matCellDef="let row">
-                <a routerLink="">
+                <a routerLink="/products/update/{{row.id}}">
                     <i class="material-icons edit" color="primary">
                         edit
                     </i>
                 </a>
 
-                <a routerLink="">
+                <a routerLink="/products/delete/{{row.id}}">
                     <i class="material-icons delete">
                         delete
                     </i>

@@ -1,0 +1,15 @@
+.card {
+    padding: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-top: 4px;
+}
+
+.container-button {
+    display: flex;
+    gap: 12px;
+}
