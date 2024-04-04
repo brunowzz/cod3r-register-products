@@ -19,6 +19,8 @@ export class ProductCreateComponent {
   ngOnInit(): void {}
 
   createProduct(): void {
+    this.product.price = Number(this.product.price);
+
     this.productService.create(this.product).subscribe(() => {
       this.productService.showMessage('Produto adicionado com sucesso!');
       this.router.navigate(['/products']);

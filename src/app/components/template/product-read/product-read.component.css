@@ -1,0 +1,18 @@
+table {
+    width: 100%;
+    text-align: left;
+}
+
+.table-container,
+.item-table {
+    padding-left: 20px;
+}
+
+i.edit {
+    margin-right: 12px;
+    color: #3f51b5;
+}
+
+i.delete {
+    color: #e35e6b;
+}

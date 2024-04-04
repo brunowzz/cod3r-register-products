@@ -1,0 +1,38 @@
+<div class="mat-elevation-z4">
+    <table mat-table [dataSource]="products">
+        <ng-container class="table-container" matColumnDef="id">
+            <th class="item-table" mat-header-cell *matHeaderCellDef>Id</th>
+            <th class="item-table" mat-cell *matCellDef="let row">{{row.id}}</th>
+        </ng-container>
+
+        <ng-container class="table-container" matColumnDef="name">
+            <th class="item-table" mat-header-cell *matHeaderCellDef>Nome</th>
+            <th class="item-table" mat-cell *matCellDef="let row">{{row.name}}</th>
+        </ng-container>
+
+        <ng-container class="table-container" matColumnDef="price">
+            <th class="item-table" mat-header-cell *matHeaderCellDef>Preço</th>
+            <th class="item-table" mat-cell *matCellDef="let row">{{row.price | currency: 'BRL'}}</th>
+        </ng-container>
+
+        <ng-container class="table-container" matColumnDef="action">
+            <th class="item-table" mat-header-cell *matHeaderCellDef>Preço</th>
+            <th class="item-table" mat-cell *matCellDef="let row">
+                <a routerLink="">
+                    <i class="material-icons edit" color="primary">
+                        edit
+                    </i>
+                </a>
+
+                <a routerLink="">
+                    <i class="material-icons delete">
+                        delete
+                    </i>
+                </a>
+            </th>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+</div>

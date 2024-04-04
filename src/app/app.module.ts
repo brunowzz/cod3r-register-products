@@ -1,7 +1,9 @@
-import { NgModule } from '@angular/core';
+import { NgModule, LOCALE_ID } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { registerLocaleData } from '@angular/common';
+import localePt from '@angular/common/locales/pt';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -21,8 +23,13 @@ import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { MatTableModule } from '@angular/material/table';
+import { MatIconModule } from '@angular/material/icon';
 
 import { RedDirective } from './directives/red.directive';
+import { ProductReadComponent } from './components/template/product-read/product-read.component';
+
+registerLocaleData(localePt);
 
 @NgModule({
   declarations: [
@@ -34,6 +41,7 @@ import { RedDirective } from './directives/red.directive';
     ProductCrudComponent,
     RedDirective,
     ProductCreateComponent,
+    ProductReadComponent,
   ],
   imports: [
     BrowserModule,
@@ -47,8 +55,16 @@ import { RedDirective } from './directives/red.directive';
     FormsModule,
     MatFormFieldModule,
     MatInputModule,
+    MatTableModule,
+    MatIconModule,
   ],
-  providers: [provideAnimationsAsync()],
+  providers: [
+    provideAnimationsAsync(),
+    {
+      provide: LOCALE_ID,
+      useValue: 'pt-br',
+    },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
